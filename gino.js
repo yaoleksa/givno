@@ -1,0 +1,1 @@
+const sorting = (collection) => { const result = []; const copy = collection; let min = copy[0]; while(copy.length > 0) { copy.forEach(item => { if(min < item) { min = item; } } ); if( !result.includes(min) ) { result.unshift(min); } copy.splice(copy.indexOf(min), 1); min = copy[0]; } return result; }
